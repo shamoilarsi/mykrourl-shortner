@@ -9,13 +9,17 @@ function Main() {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { data: shortUrl } = await getShortUrl({ longUrl });
+    let url = longUrl;
+    if (url.substr(0, 4) !== "http") url = "http://" + url;
+
+    const { data: shortUrl } = await getShortUrl({ longUrl: url });
     setShortUrl(shortUrl);
-    // setLongUrl("");
+    setLongUrl(url);
   };
 
   const closeShortUrlDialog = () => {
     setShortUrl("");
+    setLongUrl("");
   };
 
   return (
