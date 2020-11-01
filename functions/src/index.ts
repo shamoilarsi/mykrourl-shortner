@@ -38,7 +38,6 @@ export const getShortUrl = functions
       return shortUrl;
     } else {
       const { docs } = docRef;
-      const doc = docs[0];
-      return doc.data().shortUrl;
+      return docs[0].data().shortUrl;
     }
   });
