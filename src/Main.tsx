@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { getShortUrl } from "utils/firebase";
-import { isValidURL } from "utils/common";
+// import { isValidURL } from "utils/common";
 import "styles/main.css";
 
 function Main() {
@@ -11,7 +11,7 @@ function Main() {
     e.preventDefault();
 
     let url = longUrl;
-    if (url !== "" && isValidURL(url)) {
+    if (url !== "") {
       if (url.substr(0, 4) !== "http") url = "http://" + url;
 
       const { data: shortUrl } = await getShortUrl({ longUrl: url });
