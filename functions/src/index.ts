@@ -8,4 +8,4 @@ import * as functions from 'firebase-functions';
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
-export const getLongURK = functions.https.onCall((req, res) => {console.log('getLongURL called')})
+export const getLongURK = functions.region('asia-south1').https.onCall((req, res) => {console.log('getLongURL called')})
