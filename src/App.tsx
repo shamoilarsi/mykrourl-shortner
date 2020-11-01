@@ -1,10 +1,11 @@
-import React from 'react';
-import 'styles/App.css';
+import React from "react";
+import Main from "Main";
+import "styles/App.css";
 
 function App() {
   return (
     <div className="app">
-      <p>Hello</p>
+      <Main />
     </div>
   );
 }

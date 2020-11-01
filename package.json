@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cd functions && yarn install --frozen-lockfile && cd ..",
     "clean": "rm -rf node_modules && yarn install && cd functions && rm -rf node_modules && yarn install && cd ..",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

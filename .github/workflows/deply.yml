@@ -12,10 +12,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "8"
+          node-version: "12"
       - run: yarn install --frozen-lockfile
       - run: yarn build # building react app
-      - run: cd functions && yarn install --frozen-lockfile && cd .. # building firebase functions
       - name: GitHub Action for Firebase
         uses: w9jds/firebase-action@v1.5.0
         with:
