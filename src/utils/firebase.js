@@ -11,6 +11,6 @@ firebase.initializeApp({
 });
 
 const functions = firebase.app().functions("asia-south1");
-functions.useFunctionsEmulator("http://localhost:5000");
+// functions.useFunctionsEmulator("http://localhost:5000");
 export const getLongUrl = functions.httpsCallable("getLongUrl");
 export const getShortUrl = functions.httpsCallable("getShortUrl");
