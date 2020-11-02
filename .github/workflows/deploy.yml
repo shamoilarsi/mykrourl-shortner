@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: "12"
       - run: yarn install --frozen-lockfile
-      - run: yarn host # building react app
+      - run: yarn host # building react app and firebase functions
       - name: GitHub Action for Firebase
         uses: w9jds/firebase-action@v1.5.0
         with:
