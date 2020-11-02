@@ -19,6 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### To-Do
 
+    - Validate URL
     - Better UI
     - Add a hashing algorithm instead of random characters
     - Analytics for each shortened link
